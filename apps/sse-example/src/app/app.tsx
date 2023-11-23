@@ -40,6 +40,7 @@ const App = () => {
   }
 
   const createOrder = () => {
+    event?.close();
     const eventSource = new EventSource('http://localhost:3000/car-route-sse');
     setEvent(eventSource);
 
