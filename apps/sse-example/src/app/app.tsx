@@ -46,7 +46,13 @@ const App = () => {
 
     eventSource.onmessage = (event) => {
       const data = JSON.parse(event.data);
-      setCoordinates(data);
+      if (data?.coordinates) {
+        setCoordinates(data?.coordinates);
+      }
+
+      if (data?.message) {
+        console.log(data?.message);
+      }
     };
 
     // Add an error event listener
@@ -101,6 +107,8 @@ const App = () => {
           >
             {isMounted && (
               <Marker
+                title="Crazy driver"
+                draggable={false}
                 position={{
                   lat: coordinates.latitude,
                   lng: coordinates.longitude,

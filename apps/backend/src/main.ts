@@ -27,12 +27,16 @@ app.get('/car-route-sse', (req, res) => {
   const sendUpdate = () => {
     carRoute.updateRoute();
     const coordinates = carRoute.getCoordinates();
-    res.write(`data: ${JSON.stringify(coordinates)}\n\n`);
+    res.write(`data: ${JSON.stringify({ coordinates })}\n\n`);
   };
 
   // Send initial data
   const initialData = JSON.stringify(carRoute.getCoordinates());
   res.write(`data: ${initialData}\n\n`);
+
+  res.write(
+    `data: ${JSON.stringify({ message: 'Connection Stablished' })}\n\n`
+  );
 
   const intervalId = setInterval(sendUpdate, 500);
 
