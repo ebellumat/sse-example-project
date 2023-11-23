@@ -9,7 +9,7 @@ export class CarRoute {
   constructor() {
     this.centerLatitude = -20.3518; // Vila Velha latitude
     this.centerLongitude = -40.308; // Vila Velha longitude
-    this.radius = 0.005; // Adjust the radius as needed
+    this.radius = 0.01; // Adjust the radius as needed
     this.angle = 0;
     this.latitude = 0;
     this.longitude = 0;

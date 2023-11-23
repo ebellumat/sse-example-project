@@ -34,7 +34,6 @@ app.get('/car-route-sse', (req, res) => {
   const initialData = JSON.stringify(carRoute.getCoordinates());
   res.write(`data: ${initialData}\n\n`);
 
-  // Set interval to update and send data every 3 seconds
   const intervalId = setInterval(sendUpdate, 500);
 
   // Cleanup on client disconnect
