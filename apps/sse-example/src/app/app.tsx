@@ -65,10 +65,20 @@ const App = () => {
 
         <VStack>
           <HStack>
-            <Button colorScheme="blue" onClick={() => createOrder()} mb={4}>
+            <Button
+              borderRadius={'full'}
+              colorScheme="blue"
+              onClick={() => createOrder()}
+              mb={4}
+            >
               Place Order
             </Button>
-            <Button colorScheme="red" onClick={() => cancelOrder()} mb={4}>
+            <Button
+              borderRadius={'full'}
+              colorScheme="red"
+              onClick={() => cancelOrder()}
+              mb={4}
+            >
               Cancel Order
             </Button>
           </HStack>
