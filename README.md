@@ -1,3 +1,97 @@
+# Server-Side Events (SSE) Car Tracking Example
+
+This project demonstrates the implementation of Server-Side Events (SSE) for real-time updates within a monorepo using NX. The example focuses on car tracking.
+
+
+![image](https://github.com/ebellumat/sse-example-project/assets/26942680/70afde3f-9f6e-4a38-b578-2226c73544b1)
+
+## Features
+
+- **Car Tracking:** Simulates real-time tracking of a car's location using SSE.
+- **Chakra UI Integration:** Utilizes Chakra UI for a clean and aesthetically pleasing user interface.
+- **Google Maps Integration:** Displays the car's location on a Google Map component.
+
+## Project Structure
+
+- `apps/sse-example`: React application source code.
+  - `components`: React components used in the application.
+  - `App.js`: Main application component.
+  - `index.js`: Entry point for the React application.
+- `apps/backend`: Server-side code for handling SSE events.
+- `libs`: Shared libraries, configurations, and utilities.
+
+## Installation
+
+1. **Clone the Repository:**
+
+   ```bash
+   git clone https://github.com/your-username/sse-example.git
+   cd sse-example
+   ```
+
+2. **Install Dependencies:**
+
+   ```bash
+   npm install
+   ```
+
+3. **Set up Environment Variables:**
+
+   - Create a `.env` file at the project root.
+   - Add your Google Maps API key:
+
+     ```plaintext
+     REACT_APP_GOOGLE_MAPS_API_KEY=YOUR_GOOGLE_MAPS_API_KEY
+     ```
+
+4. **Run the Application:**
+
+   ```bash
+   npm run web
+   ```
+
+   This starts the development server for the React application. You can access the application at [http://localhost:3000](http://localhost:3000).
+
+5. **Run the Backend:**
+
+   ```bash
+   npm run backend
+   ```
+
+   This starts the server-side code for handling SSE events.
+
+## Usage
+
+- Open the application in your web browser.
+- Click the "Place Order" button to simulate a car tracking event.
+- The car's location will be updated in real-time on the Google Map.
+
+## Technologies Used
+
+- React
+- Chakra UI
+- Google Maps API
+- Server-Side Events (SSE)
+- NX (Monorepo)
+
+## Scripts
+
+- `npm run web`: Start the React application.
+- `npm run backend`: Start the server-side code for SSE events.
+
+## Contributing
+
+Feel free to contribute to the project by opening issues or pull requests. Your feedback and contributions are welcome!
+
+## License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
+## Acknowledgments
+
+- This project is built using [NX](https://nx.dev/) for monorepo management.
+
+
 # SseExample
 
 <a alt="Nx logo" href="https://nx.dev" target="_blank" rel="noreferrer"><img src="https://raw.githubusercontent.com/nrwl/nx/master/images/nx-logo.png" width="45"></a>
