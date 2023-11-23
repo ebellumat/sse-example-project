@@ -2,8 +2,8 @@
 
 This project demonstrates the implementation of Server-Side Events (SSE) for real-time updates within a monorepo using NX. The example focuses on car tracking.
 
+![image](https://github.com/ebellumat/sse-example-project/assets/26942680/b86350a2-a989-4413-87b2-36d8be379da2)
 
-![image](https://github.com/ebellumat/sse-example-project/assets/26942680/70afde3f-9f6e-4a38-b578-2226c73544b1)
 
 ## Features
 
