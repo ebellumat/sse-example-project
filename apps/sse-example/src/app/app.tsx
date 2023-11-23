@@ -10,7 +10,6 @@ import {
   HStack,
 } from '@chakra-ui/react';
 
-const libraries = ['places'];
 const mapContainerStyle = {
   width: '100%',
   height: '70vh',
@@ -23,10 +22,14 @@ const App = () => {
 
   const { isLoaded, loadError } = useLoadScript({
     googleMapsApiKey: import.meta.env.VITE_REACT_APP_GOOGLE_MAPS_API_KEY,
-    libraries,
   });
 
-  useEffect(() => setIsMounted(true), []);
+  useEffect(() => {
+    setIsMounted(true);
+    return () => {
+      event?.close();
+    };
+  }, []);
 
   if (loadError) {
     return <div>Error loading maps</div>;
