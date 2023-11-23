@@ -12,7 +12,7 @@ import {
 
 const mapContainerStyle = {
   width: '100%',
-  height: '70vh',
+  height: '75vh',
 };
 
 const App = () => {
@@ -48,6 +48,12 @@ const App = () => {
       const data = JSON.parse(event.data);
       setCoordinates(data);
     };
+
+    // Add an error event listener
+    eventSource.onerror = (error) => {
+      console.error('EventSource error:', error);
+      // Handle the error as needed
+    };
   };
 
   const cancelOrder = () => {
@@ -58,7 +64,7 @@ const App = () => {
     <ChakraProvider>
       <Box textAlign="center" p={4}>
         <Heading as="h1" mb={4}>
-          Car Tracker
+          Order Tracker
         </Heading>
         <Text mb={2}>Latitude: {coordinates.latitude}</Text>
         <Text mb={4}>Longitude: {coordinates.longitude}</Text>

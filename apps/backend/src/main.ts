@@ -35,7 +35,7 @@ app.get('/car-route-sse', (req, res) => {
   res.write(`data: ${initialData}\n\n`);
 
   // Set interval to update and send data every 3 seconds
-  const intervalId = setInterval(sendUpdate, 1000);
+  const intervalId = setInterval(sendUpdate, 500);
 
   // Cleanup on client disconnect
   req.on('close', () => {
