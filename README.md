@@ -35,8 +35,8 @@ This project demonstrates the implementation of Server-Side Events (SSE) for rea
    npm install
    ```
 
-3. **Set up Environment Variables:**
-
+3. **[Optional] Set up Environment Variables:**
+   - This step is optional, only for remove the "for development purposes" watermark from google maps
    - Create a `.env` file at the project root.
    - Add your Google Maps API key:
 
