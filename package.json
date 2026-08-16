@@ -1,7 +1,7 @@
 {
   "name": "@sse-example/source",
   "version": "0.0.0",
-  "license": "MIT",
+  "license": "SEE LICENSE IN LICENSE",
   "scripts": {
     "web": "nx serve sse-example",
     "backend": "nx serve backend"
